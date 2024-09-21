@@ -1,10 +1,19 @@
-function App() {
+// App.js
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 
+function App() {
   return (
-    <>
-      <h1>WelCome To CCA</h1>
-    </>
-  )
+    <div className="container block">
+      <Header/>
+      <main>
+        <Outlet />
+      </main>
+      <Footer/>
+    </div>
+  );
 }
 
-export default App
+export default App;
